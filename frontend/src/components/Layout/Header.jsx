@@ -11,6 +11,7 @@ import { RxCross1 } from "react-icons/rx";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { categoriesData } from "../../static/data";
+import logo from "../../static/imgs/logo.jpg";
 import styles from "../../styles/styles";
 import Wishlist from "../Wishlist/Wishlist";
 import Cart from "../cart/Cart";
@@ -58,7 +59,7 @@ const Header = ({ activeHeading }) => {
           <div>
             <Link to="/">
               <img
-                src="https://shopo.quomodothemes.website/assets/images/logo.svg"
+                src= {logo}
                 alt=""
               />
             </Link>
@@ -217,7 +218,7 @@ const Header = ({ activeHeading }) => {
           <div>
             <Link to="/">
               <img
-                src="https://shopo.quomodothemes.website/assets/images/logo.svg"
+                src= {logo}
                 alt=""
                 className="mt-3 cursor-pointer"
               />

@@ -12,6 +12,7 @@ const sendShopToken = require("../utils/shopToken");
 
 // create shop
 router.post("/create-shop", catchAsyncErrors(async (req, res, next) => {
+  console.log("error handler")
   try {
     const { email } = req.body;
     const sellerEmail = await Shop.findOne({ email });

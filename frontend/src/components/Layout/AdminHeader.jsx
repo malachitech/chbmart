@@ -14,7 +14,7 @@ const AdminHeader = () => {
       <div>
         <Link to="/">
           <img
-            src="https://shopo.quomodothemes.website/assets/images/logo.svg"
+            src="https://chbluxuries.com/img/favicon.jpg"
             alt=""
           />
         </Link>
