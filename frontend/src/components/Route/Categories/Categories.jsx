@@ -1,13 +1,15 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { brandingData, categoriesData } from "../../../static/data";
 import styles from "../../../styles/styles";
+// import {} from "react-router-dom"
 
 const Categories = () => {
   const navigate = useNavigate();
   return (
     <>
       <div className={`${styles.section} hidden sm:block`}>
+
         <div
           className={`branding my-12 flex justify-between w-full shadow-sm bg-white p-5 rounded-md`}
         >
@@ -28,6 +30,9 @@ const Categories = () => {
         className={`${styles.section} bg-white p-6 rounded-lg mb-12`}
         id="categories"
       >
+        <div className={`${styles.heading}`}>
+          <h1>All Categories</h1>
+        </div>
         <div className="grid grid-cols-1 gap-[5px] md:grid-cols-2 md:gap-[10px] lg:grid-cols-4 lg:gap-[20px] xl:grid-cols-5 xl:gap-[30px]">
           {categoriesData &&
             categoriesData.map((i) => {
@@ -36,16 +41,31 @@ const Categories = () => {
               };
               return (
                 <div
-                  className="w-full h-[100px] flex items-center justify-between cursor-pointer overflow-hidden"
+                  className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 cursor-pointer"
                   key={i.id}
                   onClick={() => handleSubmit(i)}
                 >
-                  <h5 className={`text-[18px] leading-[1.3]`}>{i.title}</h5>
+
                   <img
                     src={i.image_Url}
-                    className="w-[120px] object-cover"
+                    className="w-full object-cover"
                     alt=""
                   />
+                  <div class="p-5">
+          
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{i.title}</h5>
+                   
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{i.subTitle}</p>
+                    <Link to="/products" className="inline-block">
+                      <div className={`${styles.button} mt-5`}>
+                        <span className="text-[#fff] font-[Poppins] text-[18px]">
+                          Shop Now
+                        </span>
+                      </div>
+                    </Link>
+                  </div>
+
+                 
                 </div>
               );
             })}

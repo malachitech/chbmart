@@ -196,72 +196,72 @@ export const navItems = [
   export const categoriesData = [
     {
       id: 1,
-      title: "Computers and Laptops",
-      subTitle: "",
+      title: "Vibrators",
+      subTitle: "(aka vibes, personal massagers) — Objects that vibrate (move continuously/buzz) to stimulate your genitals. ",
       image_Url:
-        "https://cdn.shopify.com/s/files/1/1706/9177/products/NEWAppleMacbookProwithM1ProChip14InchLaptop2021ModelMKGQ3LL_A_16GB_1TBSSD_custommacbd.jpg?v=1659592838",
+        "https://media.istockphoto.com/id/1296761697/photo/woman-in-bedroom-holding-vibrator-in-hand.jpg?s=612x612&w=0&k=20&c=uZ04UctVTFgMN7FooP0Whv4hqUuBJTpzSv-O8dDdXdg=",
     },
     {
       id: 2,
-      title: "cosmetics and body care",
-      subTitle: "",
+      title: "Dildos",
+      subTitle: "Objects that go inside a vagina, anus, or mouth. Dildos come in many shapes and sizes, but they’re often shaped like a penis. Some look like realistic penises, and others are more abstract. ",
       image_Url:
-        "https://indian-retailer.s3.ap-south-1.amazonaws.com/s3fs-public/2021-07/kosme1.png",
+        "https://media.istockphoto.com/id/826793290/photo/black-and-white-dildos.jpg?s=612x612&w=0&k=20&c=H1A0z099mZf_e3HbEGBJdbuVJXpO051JI4A_lRP3Bdw=",
     },
     {
       id: 3,
-      title: "Accesories",
-      subTitle: "",
+      title: "Anal toys",
+      subTitle: " Sex toys made specifically to stimulate and/or go inside your anus. Anal toys include plugs (usually called butt plugs), anal beads, prostate massagers, and dildos with a wide base. ",
       image_Url:
-        "https://img.freepik.com/free-vector/ordering-goods-online-internet-store-online-shopping-niche-e-commerce-website-mother-buying-babies-clothes-footwear-toys-infant-accessories_335657-2345.jpg?w=2000",
+        "https://media.istockphoto.com/id/1133376597/photo/adult-gifts-for-couples-close-up-photo-of-colorful-various-sex-toys-dildos-prostate-massager.jpg?s=612x612&w=0&k=20&c=fc84ploy-_yD0KTX1PmlId4zzxxt6Xxy2uuJ07_gO_k=",
     },
     {
       id: 4,
-      title: "Cloths",
-      subTitle: "",
+      title: "Sleeves",
+      subTitle: " (aka masturbation sleeves, penis sleeves, or strokers) — Soft tubes that you put your penis into. Sleeves come in all shapes and sizes, and often have different textures on the inside for more sensation. Some even have vibration or suction.",
       image_Url:
-        "https://www.shift4shop.com/2015/images/industries/clothing/clothing-apparel.png",
+        "data:image/jpeg;base64,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BERAREQEREBERAREQEREBERAWv8AT7RIu1qymbeTbNG0f6g+0aPjG8b+/bsBEHm/EIQ+Nxbn2SfRUGGm5b3WW5dPdEurL6ynb9WbunjA2cZWDhxHjxWnGx9XK5m4OuObXZgoI2lAI1DuIc0rHA7cVmWN0nWxEDaMwsIdcGxyIQTY23XcIlFppFb08etayCCadWNBRl+ThYc1YMgZGLnN3Bd0cDn5nIcEEGOjBfqt9kb1tLot0b66UVLx9TARqX2Pm3eDdvfbgVjuiujj6uYQRCzRZ0klso2cebjsA48gSt84ZQR08TIYm6rGN1QPmSd5JuSeaCUiIgIiICIiAiIgIiICIiAiIgIiICIiAiIg+ELTXSnoMYf42lbeNtzIwe40m5IHw3z5d2zcy+OaCCCLgixB2EcLIPMVHOHtCrsTwRsnaAzW19L+ixwe6ow0tFyXOpnGzb7zE/3f6TlzCwCrinpzq1MMsLh9oxwb4P8AZd3glBiIwQg71bUEToxYNz4qx+lxH3m+YVnhmEVVQbU9NLJ94MLY/wDyOs31QVVNS56zsysi0b0dqK5+pCLRg/WSkfVsHAfE77o8bLMNHujAmz66QW29TETbufLkT3Nt3rZFHSRwsbHExrGNFmtaAGgcgEELR/A4aKIQwjLa5x9t7973HeflsCs0RAREQEREBERAREQEREBERAREQEREBERAREQEREBfHNByIBHNfUQdDaOIG4jYDxDW3+S70RAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQf/2Q==",
     },
     {
       id: 5,
-      title: "Shoes",
-      subTitle: "",
+      title: "Penis rings",
+      subTitle: "(aka cock rings, erectile dysfunction rings, or constriction rings) —  rings that go around your scrotum and/or penis. Penis rings slow blood flow out of the penis when it’s erect (hard), which can increase sensation, or make your erection harder and longer-lasting.",
       image_Url:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvBQPQMVNRd6TtDkGs2dCri0Y-rxKkFOiEWw&usqp=CAU",
+        "https://i5.walmartimages.com/asr/f3678d9d-c728-455c-a6ee-92c24978e965.9de5e6420b64a400de9d98c14eb080be.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF",
     },
     {
       id: 6,
-      title: "Gifts",
-      subTitle: "",
+      title: "Pumps",
+      subTitle: "(aka penis pumps, vacuum pumps, or vacuum erection pumps) — Vacuum-like devices that use a hand or battery-powered pump to create suction around your penis, clitoris, vulva, or nipples.",
       image_Url:
-        "https://securecdn.pymnts.com/wp-content/uploads/2014/11/Gifts-Photo-700x489.jpg",
+        "https://m.media-amazon.com/images/I/71eRChFmVEL.jpg",
     },
     {
       id: 7,
-      title: "Pet Care",
-      subTitle: "",
-      image_Url: "https://cdn.openpr.com/T/c/Tc15444071_g.jpg",
+      title: "Ben Wa balls",
+      subTitle: "(aka Kegel balls, Kegel trainers, vagina balls, orgasm balls) — Round objects that you put inside your vagina.",
+      image_Url: "data:image/jpeg;base64,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",
     },
     {
       id: 8,
-      title: "Mobile and Tablets",
-      subTitle: "",
+      title: "Packers",
+      subTitle: "(aka prosthetics) — objects that look and feel like a realistic penis (usually soft) that create a “bulge” in your underwear or clothes.",
       image_Url:
-        "https://st-troy.mncdn.com/mnresize/1500/1500/Content/media/ProductImg/original/mpwp3tua-apple-iphone-14-256gb-mavi-mpwp3tua-637986832343472449.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz4e35cM6Qcd7eQ_nuIEcrhuVkCOWjxwwOyw&usqp=CAU",
     },
     {
       id: 9,
-      title: "Music and Gaming",
-      subTitle: "",
+      title: "Harnesses",
+      subTitle: " (aka straps or strap-on harnesses) — garments that hold a packer, dildo, or other sex toy against your body. ",
       image_Url:
-        "https://static.vecteezy.com/system/resources/previews/011/996/555/original/3d-black-headphone-illustration-ecommerce-icon-png.png",
+        "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/30/774731/4.jpg?1810",
     },
     {
       id: 10,
       title: "Others",
-      subTitle: "",
+      subTitle: "Check out other sex materials and aids from our distinguished vendors.",
       image_Url:
-        "https://searchspring.com/wp-content/uploads/2022/10/Hero-Image-Platform-Others-2.png",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcri-HdHNcz5V3DTB0wH9f1O08kYnwYlFDzQ&usqp=CAU",
     },
   ];
   
