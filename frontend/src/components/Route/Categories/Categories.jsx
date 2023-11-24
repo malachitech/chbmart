@@ -48,7 +48,7 @@ const Categories = () => {
 
                   <img
                     src={i.image_Url}
-                    className="w-full object-cover"
+                    className="w-full h-48 object-cover"
                     alt=""
                   />
                   <div class="p-5">

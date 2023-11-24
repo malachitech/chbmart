@@ -65,13 +65,13 @@ const Header = ({ activeHeading }) => {
             </Link>
           </div>
           {/* search box */}
-          <div className="w-[50%] relative">
+          <div className="mr-[0] 1200px:mr-[0] 800px:mr-[20px] w-[50%] relative">
             <input
               type="text"
               placeholder="Search Product..."
               value={searchTerm}
               onChange={handleSearchChange}
-              className="h-[40px] w-full px-2 border-[#3957db] border-[2px] rounded-md"
+              className="h-[40px] w-full px-2 border-[#8E376A] border-[2px] rounded-md"
             />
             <AiOutlineSearch
               size={30}
@@ -203,11 +203,11 @@ const Header = ({ activeHeading }) => {
       {/* mobile header */}
       <div
         className={`${
-          active === true ? "shadow-sm fixed top-0 left-0 z-10" : null
+          active === true ? "shadow-sm fixed top-0 left-0 z-10 " : null
         }
-      w-full h-[60px] bg-[#fff] z-50 top-0 left-0 shadow-sm 800px:hidden`}
+      w-full h-[70px] bg-[#d2afc3] z-50 top-0 left-0 shadow-sm 800px:hidden`}
       >
-        <div className="w-full flex items-center justify-between">
+        <div className="h-full w-full flex items-center justify-between">
           <div>
             <BiMenuAltLeft
               size={40}
@@ -216,11 +216,11 @@ const Header = ({ activeHeading }) => {
             />
           </div>
           <div>
-            <Link to="/">
+          <Link to="/">
               <img
                 src= {logo}
                 alt=""
-                className="mt-3 cursor-pointer"
+                className="mt-3 cursor-pointer h-[70px] w-full"
               />
             </Link>
           </div>
