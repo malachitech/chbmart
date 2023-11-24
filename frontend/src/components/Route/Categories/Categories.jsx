@@ -58,7 +58,7 @@ const Categories = () => {
                     <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{i.subTitle}</p>
                     <Link to="/products" className="inline-block">
                       <div className={`${styles.button} mt-5`}>
-                        <span className="text-[#fff] font-[Poppins] text-[18px]">
+                        <span className="text-[#fff] text-[18px]">
                           Shop Now
                         </span>
                       </div>

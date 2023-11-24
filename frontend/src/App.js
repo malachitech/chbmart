@@ -1,65 +1,65 @@
+import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
+import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ShopHomePage } from "./ShopRoutes.js";
+import { getAllEvents } from "./redux/actions/event";
+import { getAllProducts } from "./redux/actions/product";
+import { loadSeller, loadUser } from "./redux/actions/user";
+import Store from "./redux/store";
 import {
-  LoginPage,
-  SignupPage,
+  AdminDashboardEvents,
+  AdminDashboardOrders,
+  AdminDashboardPage,
+  AdminDashboardProducts,
+  AdminDashboardSellers,
+  AdminDashboardUsers,
+  AdminDashboardWithdraw
+} from "./routes/AdminRoutes";
+import ProtectedAdminRoute from "./routes/ProtectedAdminRoute";
+import ProtectedRoute from "./routes/ProtectedRoute";
+import {
   ActivationPage,
-  HomePage,
-  ProductsPage,
   BestSellingPage,
+  CheckoutPage,
   EventsPage,
   FAQPage,
-  CheckoutPage,
-  PaymentPage,
-  OrderSuccessPage,
-  ProductDetailsPage,
-  ProfilePage,
-  ShopCreatePage,
-  SellerActivationPage,
-  ShopLoginPage,
+  HomePage,
+  LoginPage,
   OrderDetailsPage,
+  OrderSuccessPage,
+  PaymentPage,
+  ProductDetailsPage,
+  ProductsPage,
+  ProfilePage,
+  SellerActivationPage,
+  ShopCreatePage,
+  ShopLoginPage,
+  SignupPage,
   TrackOrderPage,
   UserInbox,
 } from "./routes/Routes.js";
+import SellerProtectedRoute from "./routes/SellerProtectedRoute";
 import {
-  ShopDashboardPage,
-  ShopCreateProduct,
-  ShopAllProducts,
-  ShopCreateEvents,
-  ShopAllEvents,
   ShopAllCoupouns,
-  ShopPreviewPage,
+  ShopAllEvents,
   ShopAllOrders,
-  ShopOrderDetails,
+  ShopAllProducts,
   ShopAllRefunds,
+  ShopCreateEvents,
+  ShopCreateProduct,
+  ShopDashboardPage,
+  ShopInboxPage,
+  ShopOrderDetails,
+  ShopPreviewPage,
   ShopSettingsPage,
   ShopWithDrawMoneyPage,
-  ShopInboxPage,
 } from "./routes/ShopRoutes";
-import {
-  AdminDashboardPage,
-  AdminDashboardUsers,
-  AdminDashboardSellers,
-  AdminDashboardOrders,
-  AdminDashboardProducts,
-  AdminDashboardEvents,
-  AdminDashboardWithdraw
-} from "./routes/AdminRoutes";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import Store from "./redux/store";
-import { loadSeller, loadUser } from "./redux/actions/user";
-import ProtectedRoute from "./routes/ProtectedRoute";
-import ProtectedAdminRoute from "./routes/ProtectedAdminRoute";
-import { ShopHomePage } from "./ShopRoutes.js";
-import SellerProtectedRoute from "./routes/SellerProtectedRoute";
-import { getAllProducts } from "./redux/actions/product";
-import { getAllEvents } from "./redux/actions/event";
-import axios from "axios";
 import { server } from "./server";
-import { Elements } from "@stripe/react-stripe-js";
-import { loadStripe } from "@stripe/stripe-js";
 
 const App = () => {
   const [stripeApikey, setStripeApiKey] = useState("");
@@ -236,7 +236,7 @@ const App = () => {
           }
         />
         <Route
-          path="/dashboard-coupouns"
+          path="/dashboard-coupons"
           element={
             <SellerProtectedRoute>
               <ShopAllCoupouns />

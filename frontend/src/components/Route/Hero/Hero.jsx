@@ -8,7 +8,7 @@ const Hero = () => {
       className={`relative min-h-[70vh] 800px:min-h-[80vh] w-full bg-no-repeat ${styles.noramlFlex}`}
       style={{
         backgroundImage:
-          "url(https://images.unsplash.com/photo-1644477547572-18f86f531192?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
+          "https://www.shutterstock.com/image-photo/intense-orgasm-colorful-various-sex-toys-1353878243",
       }}
     >
       <div className={`${styles.section} w-[90%] 800px:w-[60%]`}>
@@ -25,7 +25,7 @@ const Hero = () => {
         </p>
         <Link to="/products" className="inline-block">
             <div className={`${styles.button} mt-5`}>
-                 <span className="text-[#fff] font-[Poppins] text-[18px]">
+                 <span className="text-[#fff] text-[18px]">
                     Shop Now
                  </span>
             </div>
