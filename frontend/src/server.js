@@ -1,3 +1,3 @@
-export const server = "https://allsextoysbackend.vercel.app/api/v2";
+export const server = "https://allsextoysbackend-r185tamtv-xmalachi.vercel.app/api/v2";
 
 
