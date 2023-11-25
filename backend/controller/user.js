@@ -302,7 +302,7 @@ router.delete(
         { $pull: { addresses: { _id: addressId } } }
       );
 
-      const user = await User.findById(userId);
+      const user = await User.findByIdAndDelete(userId);
 
       res.status(200).json({ success: true, user });
     } catch (error) {

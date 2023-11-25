@@ -102,7 +102,7 @@ router.delete(
         );
       }
     
-      await event.remove();
+      await Event.findByIdAndDelete(req.params.id);
 
       res.status(201).json({
         success: true,

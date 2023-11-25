@@ -91,13 +91,15 @@ router.delete(
         );
       }
     
-      await product.remove();
+      // await product.remove();
+      await Product.findByIdAndDelete(req.params.id)
 
       res.status(201).json({
         success: true,
         message: "Product Deleted successfully!",
       });
     } catch (error) {
+      console.log(new ErrorHandler(error, 400))
       return next(new ErrorHandler(error, 400));
     }
   })
