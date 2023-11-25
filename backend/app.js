@@ -2,7 +2,7 @@ const express = require("express");
 const ErrorHandler = require("./middleware/error");
 const app = express();
 const cookieParser = require("cookie-parser");
-// const bodyParser = require("body-parser");
+const bodyParser = require("body-parser");
 const cors = require("cors");
 const path = require("path");
 
@@ -12,7 +12,7 @@ app.use(cors({
 }));
 // app.use(express.bodyParser({limit: '50mb'}))
 app.use(express.json());
-// app.use(bodyParser.json({limit: '50mb'}));
+app.use(bodyParser.json({limit: '50mb'}));
 app.use(cookieParser());
 app.use("/", express.static(path.join(__dirname, "./uploads")));
 app.use("/test", (req, res) => {
