@@ -35,7 +35,7 @@ router.post("/create-user", async (req, res, next) => {
 
     const activationToken = createActivationToken(user);
 
-    const activationUrl = `https://allsextoys-4sur68fat-xmalachi.vercel.app/activation/${activationToken}`;
+    const activationUrl = `https://allsextoys.vercel.app/activation/${activationToken}`;
 
     try {
       await sendMail({

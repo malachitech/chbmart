@@ -40,7 +40,7 @@ router.post("/create-shop", catchAsyncErrors(async (req, res, next) => {
 
     const activationToken = createActivationToken(seller);
 
-    const activationUrl = `https://allsextoys-4sur68fat-xmalachi.vercel.app/seller/activation/${activationToken}`;
+    const activationUrl = `https://allsextoys.vercel.app/seller/activation/${activationToken}`;
 
     try {
       await sendMail({

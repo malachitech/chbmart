@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 app.use(cors({
-  origin: ['https://allsextoys-4sur68fat-xmalachi.vercel.app'],
+  origin: ['https://allsextoys.vercel.app'],
   credentials: true
 }));
 // app.use(express.bodyParser({limit: '50mb'}))
