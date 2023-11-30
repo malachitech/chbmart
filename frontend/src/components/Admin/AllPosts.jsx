@@ -59,7 +59,7 @@ const AllPosts = () => {
       row.push({
         id: item._id,
         title: item.title,
-        description: "US$ " + item.description,
+        description: item.description,
       });
     });
 
