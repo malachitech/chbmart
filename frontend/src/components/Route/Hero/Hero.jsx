@@ -13,7 +13,7 @@ const Hero = () => {
     >
       <div className={`${styles.section}  w-[90%] 800px:w-[60%]`}>
         <h1
-          className={`text-[45px] leading-[1.2] 800px:text-[80px] 1200px:text-[80px] text-[#E6007E] font-[700] capitalize`}
+          className={`text-[45px] leading-[1.2] 800px:text-[80px] 1200px:text-[80px] text-white font-[700] capitalize`}
         >
           Best Collection Of <br /> Sex Toys
         </h1>
