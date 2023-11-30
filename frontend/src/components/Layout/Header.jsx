@@ -4,10 +4,10 @@ import {
   AiOutlineSearch,
   AiOutlineShoppingCart,
 } from "react-icons/ai";
-import { IoChatbubbleEllipses } from "react-icons/io5";
 import { BiMenuAltLeft } from "react-icons/bi";
 import { CgProfile } from "react-icons/cg";
 import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
+import { IoChatbubbleEllipses } from "react-icons/io5";
 import { RxCross1 } from "react-icons/rx";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -219,16 +219,9 @@ const Header = ({ activeHeading }) => {
 
       {/* mobile header */}
       <div
-<<<<<<< HEAD
         className={`${active === true ? "shadow-sm fixed top-0 left-0 z-10 " : null
           }
       w-full h-[70px] bg-[#d2afc3] z-50 top-0 left-0 shadow-sm 800px:hidden`}
-=======
-        className={`${
-          active === true ? "shadow-sm fixed top-0 left-0 z-10 " : null
-        }
-      w-full h-[70px] bg-[#E6007E] z-50 top-0 left-0 shadow-sm 800px:hidden`}
->>>>>>> 4e0861f09b0b6fe935887793acd249f25ac0dbb1
       >
         <div className="h-full w-full flex items-center justify-between">
           <div>
