@@ -59,7 +59,7 @@ const Header = ({ activeHeading }) => {
           <div className="">
             <Link to="/">
               <img className="h-full w-2/5"
-                src= {logo}
+                src={logo}
                 alt=""
               />
             </Link>
@@ -109,9 +109,8 @@ const Header = ({ activeHeading }) => {
         </div>
       </div>
       <div
-        className={`${
-          active === true ? "shadow-sm fixed top-0 left-0 z-10" : null
-        } transition hidden 800px:flex items-center justify-between w-full bg-[#8E376A] h-[70px]`}
+        className={`${active === true ? "shadow-sm fixed top-0 left-0 z-10" : null
+          } transition hidden 800px:flex items-center justify-between w-full bg-[#8E376A] h-[70px]`}
       >
         <div
           className={`${styles.section} relative ${styles.noramlFlex} justify-between`}
@@ -202,9 +201,8 @@ const Header = ({ activeHeading }) => {
 
       {/* mobile header */}
       <div
-        className={`${
-          active === true ? "shadow-sm fixed top-0 left-0 z-10 " : null
-        }
+        className={`${active === true ? "shadow-sm fixed top-0 left-0 z-10 " : null
+          }
       w-full h-[70px] bg-[#d2afc3] z-50 top-0 left-0 shadow-sm 800px:hidden`}
       >
         <div className="h-full w-full flex items-center justify-between">
@@ -216,9 +214,9 @@ const Header = ({ activeHeading }) => {
             />
           </div>
           <div>
-          <Link to="/">
+            <Link to="/">
               <img
-                src= {logo}
+                src={logo}
                 alt=""
                 className="mt-3 cursor-pointer h-[70px] w-full"
               />

@@ -21,6 +21,11 @@ export const navItems = [
       url: "/events",
     },
     {
+      id: 4,
+      title: "Blog",
+      url: "/posts",
+    },
+    {
       id: 5,
       title: "Live Chat",
       url: "/faq",
