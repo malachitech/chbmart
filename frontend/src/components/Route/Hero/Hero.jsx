@@ -13,15 +13,12 @@ const Hero = () => {
     >
       <div className={`${styles.section}  w-[90%] 800px:w-[60%]`}>
         <h1
-          className={`text-[45px] leading-[1.2] 800px:text-[60px] 1200px:text-[80px] text-[#ffffff] font-[700] capitalize`}
+          className={`text-[45px] leading-[1.2] 800px:text-[80px] 1200px:text-[80px] text-[#E6007E] font-[700] capitalize`}
         >
           Best Collection Of <br /> Sex Toys
         </h1>
         <p className="pt-5 text-[16px] 800px:text-[16px] 1200px:text-[20px] font-[400] text-[#ffffff]">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae,
-          assumenda? Quisquam itaque <br /> exercitationem labore vel, dolore
-          quidem asperiores, laudantium temporibus soluta optio consequatur{" "}
-          <br /> aliquam deserunt officia. Dolorum saepe nulla provident.
+        We provide solutions and guidance needed in relationships regarding all aspects of their sex life's challenges. With our experienced and  professional counselors, date deal  offers an accessible, convenient solution for those seeking online therapy. Take an in-depth questionnaire to find the right therapist for you.
         </p>
         <Link to="/products" className="inline-block">
           <div className={`${styles.button} mt-5`}>

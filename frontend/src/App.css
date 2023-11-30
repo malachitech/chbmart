@@ -11,7 +11,7 @@
 }
 body {
     scroll-behavior: smooth;
-    background: #F6F6F5;
+    background: #000000;
 }
 input,select{
   outline: none;
