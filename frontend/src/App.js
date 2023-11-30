@@ -41,7 +41,7 @@ import {
   ShopLoginPage,
   SignupPage,
   TrackOrderPage,
-  UserInbox,
+  UserInbox, LiveChat
 } from "./routes/Routes.js";
 import SellerProtectedRoute from "./routes/SellerProtectedRoute";
 import {
@@ -108,7 +108,8 @@ const App = () => {
         <Route path="/product/:id" element={<ProductDetailsPage />} />
         <Route path="/best-selling" element={<BestSellingPage />} />
         <Route path="/events" element={<EventsPage />} />
-        <Route path="/faq" element={<FAQPage />} />
+        <Route path="/about" element={<LiveChat />} />
+        <Route path="/contact" element={<FAQPage />} />
         <Route
           path="/checkout"
           element={
