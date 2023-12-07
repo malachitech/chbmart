@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styles from "../../styles/styles";
 
 const EventCard = ({ active, data }) => {
-
+    console.log(data, "post data")
     return (
         <div
             className={`w-full block bg-white rounded-lg ${active ? "unset" : "mb-12"
@@ -18,7 +18,7 @@ const EventCard = ({ active, data }) => {
                 
                 <br />
                 <div className="flex items-center">
-                    <Link to={`/post/${data._id}?isEvent=true`}>
+                    <Link to={`/post/${data._id}?isPost=true`}>
                         <div className={`${styles.button} text-[#fff]`}>See Details</div>
                     </Link>
                 </div>
