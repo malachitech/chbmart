@@ -51,7 +51,7 @@ export const postReducer = createReducer(initialState, {
   },
   getAllpostsSuccess: (state, action) => {
     state.isLoading = false;
-    state.posts = action.payload;
+    state.allPosts = action.payload;
   },
   getAllpostsFailed: (state, action) => {
     state.isLoading = false;

@@ -9,6 +9,8 @@ import styles from "../styles/styles";
 
 const PostsPage = () => {
   const { allPosts, isLoading } = useSelector((state) => state.posts);
+  console.log(allPosts, "all post data")
+
   return (
     <>
       {isLoading ? (
