@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styles from "../../styles/styles";
 
-const EventCard = ({ active, data }) => {
+const PostCard = ({ active, data }) => {
     console.log(data, "post data")
     return (
         <div
@@ -27,4 +27,4 @@ const EventCard = ({ active, data }) => {
     );
 };
 
-export default EventCard;
+export default PostCard;
