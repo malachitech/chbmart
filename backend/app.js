@@ -7,7 +7,7 @@ const cors = require("cors");
 const path = require("path");
 
 app.use(cors({
-  origin: ['https://allsextoys.vercel.app'],
+  origin: ['http://localhost:3000'],
   credentials: true
 }));
 // app.use(express.bodyParser({limit: '50mb'}))
