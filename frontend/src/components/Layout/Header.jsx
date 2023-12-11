@@ -64,6 +64,7 @@ const Header = ({ activeHeading, data }) => {
 
   const handleMessageSubmit = async () => {
     if (isAuthenticated) {
+      navigate(`/inbox`)
       console.log("data", data)
         const groupTitle = data._id + user._id;
         const userId = user._id;
