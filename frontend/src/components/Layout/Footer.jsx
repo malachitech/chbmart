@@ -33,8 +33,10 @@ const Footer = () => {
       .then((response) => {
         console.log('Email sent!', response);
         // Handle success, e.g., show a success message, clear form fields, etc.
-        emailInputRef.current.value = '';
+      ////////////////////////////////////////  emailInputRef.current.value = '';
       })
+
+
       .catch((error) => {
         console.error('Error sending email:', error);
         // Handle error, e.g., show an error message to the user
