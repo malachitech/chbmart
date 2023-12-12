@@ -8,6 +8,7 @@ import { server } from "../../server";
 import { toast } from "react-toastify";
 import logo from "../../static/imgs/logo.png"
 
+
 const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
