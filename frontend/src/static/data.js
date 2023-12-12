@@ -25,13 +25,9 @@ export const navItems = [
     title: "Blog",
     url: "/posts",
   },
+  
   {
     id: 6,
-    title: "Live Chat",
-    url: "/faq",
-  },
-  {
-    id: 7,
     title: "FAQ",
     url: "/faq",
   },

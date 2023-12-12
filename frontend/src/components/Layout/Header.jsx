@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState } from "react";
 import {
   AiOutlineHeart,
@@ -10,7 +11,9 @@ import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
 import { IoChatbubbleEllipses } from "react-icons/io5";
 import { RxCross1 } from "react-icons/rx";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import { server } from "../../server";
 import { categoriesData } from "../../static/data";
 import logo from "../../static/imgs/logo.png";
 import styles from "../../styles/styles";
@@ -19,7 +22,9 @@ import Cart from "../cart/Cart";
 import DropDown from "./DropDown";
 import Navbar from "./Navbar";
 
-const Header = ({ activeHeading }) => {
+
+const Header = ({ activeHeading, data }) => {
+  const navigate = useNavigate();
   const { isAuthenticated, user } = useSelector((state) => state.user);
   const { isSeller } = useSelector((state) => state.seller);
   const { wishlist } = useSelector((state) => state.wishlist);
@@ -33,7 +38,10 @@ const Header = ({ activeHeading }) => {
   const [openCart, setOpenCart] = useState(false);
   const [openWishlist, setOpenWishlist] = useState(false);
   const [open, setOpen] = useState(false);
+      console.log("data", data)
 
+  
+  
   const handleSearchChange = (e) => {
     const term = e.target.value;
     setSearchTerm(term);
@@ -53,6 +61,30 @@ const Header = ({ activeHeading }) => {
       setActive(false);
     }
   });
+
+  const handleMessageSubmit = async () => {
+    if (isAuthenticated) {
+      navigate(`/inbox`)
+      console.log("data", data)
+        const groupTitle = data._id + user._id;
+        const userId = user._id;
+        const sellerId = data.shop._id;
+        await axios
+          .post(`${server}/conversation/create-new-conversation`, {
+            groupTitle,
+            userId,
+            sellerId,
+          })
+          .then((res) => {
+            navigate(`/inbox?${res.data.conversation._id}`);
+          })
+          .catch((error) => {
+            toast.error(error.response.data.message);
+          });
+    } else {
+      toast.error("Please login to create a conversation");
+    }
+  };
 
   return (
     <>
@@ -146,7 +178,7 @@ const Header = ({ activeHeading }) => {
 
           <div className="flex">
             <div className={`${styles.noramlFlex}`}>
-                <div className="relative cursor-pointer mr-[15px]" onClick={() => setMessages(true)}>
+                <div className="relative cursor-pointer mr-[15px]" onClick={handleMessageSubmit}>
                   <IoChatbubbleEllipses size={30} color="rgb(255 255 255 / 83%)"/>
                 </div>
             </div>

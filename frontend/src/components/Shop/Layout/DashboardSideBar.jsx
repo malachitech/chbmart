@@ -110,6 +110,40 @@ const DashboardSideBar = ({ active }) => {
       </div>
 
       <div className="w-full flex items-center p-4">
+        <Link to="/dashboard-posts" className="w-full flex items-center">
+          <MdOutlineLocalOffer
+            size={30}
+            color={`${active === 5 ? "#8E376A" : "#555"}`}
+          />
+          <h5
+            className={`hidden 800px:block pl-2 text-[18px] font-[400] ${
+              active === 5 ? "text-[#8E376A]" : "text-[#555]"
+            }`}
+          >
+            All Posts
+          </h5>
+        </Link>
+      </div>
+
+      <div className="w-full flex items-center p-4">
+        <Link to="/dashboard-create-post" className="w-full flex items-center">
+          <VscNewFile
+            size={30}
+            color={`${active === 6 ? "#8E376A" : "#555"}`}
+          />
+          <h5
+            className={`hidden 800px:block pl-2 text-[18px] font-[400] ${
+              active === 6 ? "text-[#8E376A]" : "text-[#555]"
+            }`}
+          >
+            Create Post
+          </h5>
+        </Link>
+      </div>
+
+
+
+      <div className="w-full flex items-center p-4">
         <Link
           to="/dashboard-withdraw-money"
           className="w-full flex items-center"
