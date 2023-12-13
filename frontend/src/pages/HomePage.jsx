@@ -67,7 +67,9 @@ const HomePage = () => {
           <SliderIndicatorsOutside />
         </SlideInOnScroll>
         <SlideInOnScroll>
+
           <Footer onClick={handleFooterClick}/>
+
         </SlideInOnScroll>
       </div>
     </div>

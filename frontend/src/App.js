@@ -8,6 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import { ShopHomePage } from "./ShopRoutes.js";
 import { getAllEvents } from "./redux/actions/event";
+import { getAllPosts } from "./redux/actions/post";
 import { getAllProducts } from "./redux/actions/product";
 import { loadSeller, loadUser } from "./redux/actions/user";
 import Store from "./redux/store";
@@ -15,6 +16,7 @@ import {
   AdminDashboardEvents,
   AdminDashboardOrders,
   AdminDashboardPage,
+  AdminDashboardPosts,
   AdminDashboardProducts,
   AdminDashboardSellers,
   AdminDashboardUsers,
@@ -33,6 +35,7 @@ import {
   OrderDetailsPage,
   OrderSuccessPage,
   PaymentPage,
+  PostsPage,
   ProductDetailsPage,
   ProductsPage,
   ProfilePage,
@@ -41,16 +44,18 @@ import {
   ShopLoginPage,
   SignupPage,
   TrackOrderPage,
-  UserInbox, LiveChat
+  UserInbox
 } from "./routes/Routes.js";
 import SellerProtectedRoute from "./routes/SellerProtectedRoute";
 import {
   ShopAllCoupouns,
   ShopAllEvents,
   ShopAllOrders,
+  ShopAllPosts,
   ShopAllProducts,
   ShopAllRefunds,
   ShopCreateEvents,
+  ShopCreatePosts,
   ShopCreateProduct,
   ShopDashboardPage,
   ShopInboxPage,
@@ -60,6 +65,7 @@ import {
   ShopWithDrawMoneyPage,
 } from "./routes/ShopRoutes";
 import { server } from "./server";
+
 
 const App = () => {
   const [stripeApikey, setStripeApiKey] = useState("");
@@ -73,6 +79,7 @@ const App = () => {
     Store.dispatch(loadSeller());
     Store.dispatch(getAllProducts());
     Store.dispatch(getAllEvents());
+    Store.dispatch(getAllPosts());
     getStripeApikey();
   }, []);
 
@@ -108,8 +115,10 @@ const App = () => {
         <Route path="/product/:id" element={<ProductDetailsPage />} />
         <Route path="/best-selling" element={<BestSellingPage />} />
         <Route path="/events" element={<EventsPage />} />
-        <Route path="/about" element={<LiveChat />} />
-        <Route path="/contact" element={<FAQPage />} />
+
+         <Route path="/posts" element={<PostsPage />} />
+        <Route path="/faq" element={<FAQPage />} />
+
         <Route
           path="/checkout"
           element={
@@ -229,10 +238,26 @@ const App = () => {
           }
         />
         <Route
+          path="/dashboard-create-post"
+          element={
+            <SellerProtectedRoute>
+              <ShopCreatePosts />
+            </SellerProtectedRoute>
+          }
+        />
+        <Route
           path="/dashboard-events"
           element={
             <SellerProtectedRoute>
               <ShopAllEvents />
+            </SellerProtectedRoute>
+          }
+        />
+        <Route
+          path="/dashboard-posts"
+          element={
+            <SellerProtectedRoute>
+              <ShopAllPosts />
             </SellerProtectedRoute>
           }
         />
@@ -309,6 +334,15 @@ const App = () => {
             </ProtectedAdminRoute>
           }
         />
+        <Route
+          path="/admin-posts"
+          element={
+            <ProtectedAdminRoute>
+              <AdminDashboardPosts />
+            </ProtectedAdminRoute>
+          }
+        />
+
          <Route
           path="/admin-withdraw-request"
           element={

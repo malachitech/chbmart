@@ -1,13 +1,13 @@
-import React, { useEffect, useRef, useState } from "react";
-import Header from "../components/Layout/Header";
-import { useSelector } from "react-redux";
-import socketIO from "socket.io-client";
-import { format } from "timeago.js";
-import { server } from "../server";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useRef, useState } from "react";
 import { AiOutlineArrowRight, AiOutlineSend } from "react-icons/ai";
 import { TfiGallery } from "react-icons/tfi";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import socketIO from "socket.io-client";
+import { format } from "timeago.js";
+import Header from "../components/Layout/Header";
+import { server } from "../server";
 import styles from "../styles/styles";
 const ENDPOINT = "https://socket-ecommerce-tu68.onrender.com/";
 const socketId = socketIO(ENDPOINT, { transports: ["websocket"] });
@@ -212,8 +212,9 @@ const UserInbox = () => {
       {!open && (
         <>
           <Header />
+          <div className="bg-[#fff] flex flex-col justify-center align-center m-auto w-1/2 p-20 h-full rounded-lg h-full mt-24">
           <h1 className="text-center text-[30px] py-3 font-Poppins">
-            All Messages
+            Choose Seller To Message
           </h1>
           {/* All messages list */}
           {conversations &&
@@ -232,6 +233,8 @@ const UserInbox = () => {
                 loading={loading}
               />
             ))}
+
+          </div>
         </>
       )}
 
