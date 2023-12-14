@@ -40,6 +40,7 @@ export {
     OrderDetailsPage,
     TrackOrderPage,
     UserInbox,
+    PostsPage,
     LiveChat
 };
 
