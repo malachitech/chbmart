@@ -20,7 +20,26 @@ import SignupPage from "../pages/SignupPage";
 import TrackOrderPage from "../pages/TrackOrderPage";
 import UserInbox from "../pages/UserInbox.jsx";
 
-export {
-    ActivationPage, BestSellingPage, CheckoutPage, EventsPage, FAQPage, HomePage, LiveChat, LoginPage, OrderDetailsPage, OrderSuccessPage, PaymentPage, PostsPage, ProductDetailsPage, ProductsPage, ProfilePage, SellerActivationPage, ShopCreatePage, ShopLoginPage, SignupPage, TrackOrderPage,
-    UserInbox
+export { 
+    LoginPage,
+    SignupPage,
+    ActivationPage,
+    HomePage,
+    ProductsPage,
+    BestSellingPage,
+    EventsPage,
+    FAQPage,
+    CheckoutPage,
+    PaymentPage,
+    OrderSuccessPage,
+    ProductDetailsPage,
+    ProfilePage,
+    ShopCreatePage,
+    SellerActivationPage,
+    ShopLoginPage,
+    OrderDetailsPage,
+    TrackOrderPage,
+    UserInbox,
+    LiveChat
 };
+

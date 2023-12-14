@@ -92,8 +92,8 @@ const Header = ({ activeHeading, data }) => {
         <div className="hidden 800px:h-[50px] 800px:my-[20px] 800px:flex items-center justify-between">
           <div className="">
             <Link to="/">
-              <img className="h-full w-2/5"
-                src={logo}
+              <img className="h-auto max-w-full w-2/5 ml-8"
+                src= {logo}
                 alt=""
               />
             </Link>
@@ -143,8 +143,9 @@ const Header = ({ activeHeading, data }) => {
         </div>
       </div>
       <div
-        className={`${active === true ? "shadow-sm fixed top-0 left-0 z-10" : null
-          } transition hidden 800px:flex items-center justify-between w-full bg-[#8E376A] h-[70px]`}
+        className={`${
+          active === true ? "shadow-sm fixed top-0 left-0 z-10" : null
+        } transition hidden 800px:flex items-center justify-between w-full bg-[#E6007E] h-[70px]`}
       >
         <div
           className={`${styles.section} relative ${styles.noramlFlex} justify-between`}
@@ -178,7 +179,8 @@ const Header = ({ activeHeading, data }) => {
 
           <div className="flex">
             <div className={`${styles.noramlFlex}`}>
-                <div className="relative cursor-pointer mr-[15px]" onClick={handleMessageSubmit}>
+
+                <div className="relative cursor-pointer mr-[15px]" onClick={() => setMessages(true)}>
                   <IoChatbubbleEllipses size={30} color="rgb(255 255 255 / 83%)"/>
                 </div>
             </div>
@@ -240,6 +242,7 @@ const Header = ({ activeHeading, data }) => {
 
       {/* mobile header */}
       <div
+
         className={`${active === true ? "shadow-sm fixed top-0 left-0 z-10 " : null
           }
       w-full h-[70px] bg-[#d2afc3] z-50 top-0 left-0 shadow-sm 800px:hidden`}
@@ -257,7 +260,8 @@ const Header = ({ activeHeading, data }) => {
               <img
                 src={logo}
                 alt=""
-                className="mt-3 cursor-pointer h-[70px] w-full"
+                className="mt-3 cursor-pointer max-w-full h-auto"
+                style={{ maxHeight: '70px' }} 
               />
             </Link>
           </div>
