@@ -31,7 +31,7 @@ const ProductsPage = () => {
         isLoading ? (
           <Loader />
         ) : (
-          <div>
+          <div style={{color: 'white'}}>
             <Header activeHeading={3} />
             <br />
             <br />

@@ -28,11 +28,19 @@ const Categories = () => {
       <div
         className={`${styles.section} bg-black p-6 rounded-lg mb-12`}
         id="categories"
+
+        style={{
+          backgroundImage: "url('https://img.freepik.com/free-photo/portrait-woman-dark-bar_53876-14526.jpg?size=626&ext=jpg&ga=GA1.1.1799229163.1671081494&semt=ais')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed", // Set background attachment to fixed
+          position: "relative",
+        }}
       >
         <div className={`${styles.heading}`}>
           <h1 style={{color: 'white'}}>All Categories</h1>
         </div>
-        <div className="grid grid-cols-1 gap-[70px] md:grid-cols-2 md:gap-[10px] lg:grid-cols-4 lg:gap-[20px] xl:grid-cols-5 xl:gap-[30px]">
+        <div className="grid grid-cols-1 gap-[70px] md:grid-cols-2 md:gap-[10px] lg:grid-cols-4 lg:gap-[20px] xl:grid-cols-5 xl:gap-[30px]" style={{marginLeft: '50px'}}>
           {categoriesData &&
             categoriesData.map((i) => {
               const handleSubmit = (i) => {
@@ -63,8 +71,6 @@ const Categories = () => {
                       </div>
                     </Link>
                   </div>
-
-                 
                 </div>
               );
             })}
