@@ -26,7 +26,7 @@ export const navItems = [
     id: 5,
 
     title: "About Us",
-    url: "/about",
+    url: "/faq",
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ export const navItems = [
   {
     id: 5,
     title: "Contact Us",
-    url: "/contact",
+    url: "/faq",
   },
 ];
 
