@@ -1,14 +1,13 @@
 import axios from "axios";
-import React, { useRef, useState } from "react";
-import { useEffect } from "react";
-import { server } from "../../server";
-import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useRef, useState } from "react";
 import { AiOutlineArrowRight, AiOutlineSend } from "react-icons/ai";
-import styles from "../../styles/styles";
 import { TfiGallery } from "react-icons/tfi";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import socketIO from "socket.io-client";
 import { format } from "timeago.js";
+import { server } from "../../server";
+import styles from "../../styles/styles";
 const ENDPOINT = "https://socket-ecommerce-tu68.onrender.com/";
 const socketId = socketIO(ENDPOINT, { transports: ["websocket"] });
 
@@ -270,10 +269,11 @@ const MessageList = ({
     setOpen(true);
   };
   const [active, setActive] = useState(0);
+  console.log(user, "first one");
 
   useEffect(() => {
     const userId = data.members.find((user) => user != me);
-
+  
     const getUser = async () => {
       try {
         const res = await axios.get(`${server}/user/user-info/${userId}`);
@@ -284,7 +284,7 @@ const MessageList = ({
     };
     getUser();
   }, [me, data]);
-
+  console.log(user, "second one")
   return (
     <div
       className={`w-full flex p-3 px-3 ${
@@ -315,7 +315,7 @@ const MessageList = ({
         <p className="text-[16px] text-[#000c]">
           {!isLoading && data?.lastMessageId !== user?._id
             ? "You:"
-            : user?.name.split(" ")[0] + ": "}{" "}
+            : user && user?.name.split(" ")[0] + ": "}{" "}
           {data?.lastMessage}
         </p>
       </div>

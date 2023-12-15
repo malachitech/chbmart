@@ -30,6 +30,12 @@ export const navItems = [
   },
   {
     id: 5,
+
+    title: "Blog",
+    url: "/posts",
+  },
+  {
+    id: 5,
     title: "Contact Us",
     url: "/contact",
   },

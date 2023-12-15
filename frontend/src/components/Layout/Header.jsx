@@ -180,7 +180,7 @@ const Header = ({ activeHeading, data }) => {
           <div className="flex">
             <div className={`${styles.noramlFlex}`}>
 
-                <div className="relative cursor-pointer mr-[15px]" onClick={() => setMessages(true)}>
+                <div className="relative cursor-pointer mr-[15px]" onClick={handleMessageSubmit}>
                   <IoChatbubbleEllipses size={30} color="rgb(255 255 255 / 83%)"/>
                 </div>
             </div>
