@@ -277,7 +277,10 @@ const MessageList = ({
     const getUser = async () => {
       try {
         const res = await axios.get(`${server}/user/user-info/${userId}`);
+        console.log(res.data.user, "third one");
+
         setUser(res.data.user);
+        console.log(res.data.user, "fourth one");
       } catch (error) {
         console.log(error);
       }
@@ -315,7 +318,7 @@ const MessageList = ({
         <p className="text-[16px] text-[#000c]">
           {!isLoading && data?.lastMessageId !== user?._id
             ? "You:"
-            : user && user?.name.split(" ")[0] + ": "}{" "}
+            : user?.name.split(" ")[0] + ": "}{" "}
           {data?.lastMessage}
         </p>
       </div>
