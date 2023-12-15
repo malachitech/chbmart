@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react'
+import React from 'react';
 import { useSelector } from 'react-redux';
-import styles from '../../styles/styles'
+import styles from '../../styles/styles';
 import EventCard from "./EventCard";
 
 const Events = () => {
@@ -11,7 +11,7 @@ const Events = () => {
      {
       !isLoading && (
         <div className={`${styles.section}`}>
-      <div className={`${styles.heading}`}>
+      <div className={`${styles.heading} text-white`}>
         <h1>Popular Events</h1>
       </div>
 

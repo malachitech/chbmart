@@ -65,7 +65,7 @@ const Footer = () => {
             className="text-gray-800
                 sm:w-72 w-full sm:mr-5 mr-1 lg:mb-0 mb-4 py-2.5 rounded px-2 focus:outline-none"
           />
-          <button type="submit" className="hover:bg-[#000] bg-[#000000] hover:bg-blue-500 duration-300 px-5 py-2.5 rounded-md text-whie md:w-auto w-full">
+              <button type="submit" className="hover:bg-[#000] bg-[#000000] hover:bg-blue-500 duration-300 px-5 py-2.5 rounded-md text-whie md:w-auto w-full">
             Submit
           </button>
         </form>

@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 import {
   AiFillHeart,
@@ -7,17 +8,16 @@ import {
 } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import { addTocart } from "../../redux/actions/cart";
 import { getAllProductsShop } from "../../redux/actions/product";
-import { server } from "../../server";
-import styles from "../../styles/styles";
 import {
   addToWishlist,
   removeFromWishlist,
 } from "../../redux/actions/wishlist";
-import { addTocart } from "../../redux/actions/cart";
-import { toast } from "react-toastify";
+import { server } from "../../server";
+import styles from "../../styles/styles";
 import Ratings from "./Ratings";
-import axios from "axios";
 
 const ProductDetails = ({ data }) => {
   const { wishlist } = useSelector((state) => state.wishlist);
@@ -92,6 +92,8 @@ const ProductDetails = ({ data }) => {
 
   const handleMessageSubmit = async () => {
     if (isAuthenticated) {
+      console.log("data", data)
+
       const groupTitle = data._id + user._id;
       const userId = user._id;
       const sellerId = data.shop._id;
@@ -228,7 +230,7 @@ const ProductDetails = ({ data }) => {
                     onClick={handleMessageSubmit}
                   >
                     <span className="text-white flex items-center">
-                      Send Message <AiOutlineMessage className="ml-1" />
+                      Send Message Now <AiOutlineMessage className="ml-1" />
                     </span>
                   </div>
                 </div>

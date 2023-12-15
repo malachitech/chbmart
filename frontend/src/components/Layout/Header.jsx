@@ -1,16 +1,19 @@
+import axios from "axios";
 import React, { useState } from "react";
 import {
   AiOutlineHeart,
   AiOutlineSearch,
   AiOutlineShoppingCart,
 } from "react-icons/ai";
-import { IoChatbubbleEllipses } from "react-icons/io5";
 import { BiMenuAltLeft } from "react-icons/bi";
 import { CgProfile } from "react-icons/cg";
 import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
+import { IoChatbubbleEllipses } from "react-icons/io5";
 import { RxCross1 } from "react-icons/rx";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import { server } from "../../server";
 import { categoriesData } from "../../static/data";
 import logo from "../../static/imgs/logo.png";
 import styles from "../../styles/styles";
@@ -19,7 +22,9 @@ import Cart from "../cart/Cart";
 import DropDown from "./DropDown";
 import Navbar from "./Navbar";
 
-const Header = ({ activeHeading }) => {
+
+const Header = ({ activeHeading, data }) => {
+  const navigate = useNavigate();
   const { isAuthenticated, user } = useSelector((state) => state.user);
   const { isSeller } = useSelector((state) => state.seller);
   const { wishlist } = useSelector((state) => state.wishlist);
@@ -33,7 +38,10 @@ const Header = ({ activeHeading }) => {
   const [openCart, setOpenCart] = useState(false);
   const [openWishlist, setOpenWishlist] = useState(false);
   const [open, setOpen] = useState(false);
+      console.log("data", data)
 
+  
+  
   const handleSearchChange = (e) => {
     const term = e.target.value;
     setSearchTerm(term);
@@ -53,6 +61,30 @@ const Header = ({ activeHeading }) => {
       setActive(false);
     }
   });
+
+  const handleMessageSubmit = async () => {
+    if (isAuthenticated) {
+      navigate(`/inbox`)
+      console.log("data", data)
+        const groupTitle = data._id + user._id;
+        const userId = user._id;
+        const sellerId = data.shop._id;
+        await axios
+          .post(`${server}/conversation/create-new-conversation`, {
+            groupTitle,
+            userId,
+            sellerId,
+          })
+          .then((res) => {
+            navigate(`/inbox?${res.data.conversation._id}`);
+          })
+          .catch((error) => {
+            toast.error(error.response.data.message);
+          });
+    } else {
+      toast.error("Please login to create a conversation");
+    }
+  };
 
   return (
     <>
@@ -147,6 +179,7 @@ const Header = ({ activeHeading }) => {
 
           <div className="flex">
             <div className={`${styles.noramlFlex}`}>
+
                 <div className="relative cursor-pointer mr-[15px]" onClick={() => setMessages(true)}>
                   <IoChatbubbleEllipses size={30} color="rgb(255 255 255 / 83%)"/>
                 </div>
@@ -209,10 +242,10 @@ const Header = ({ activeHeading }) => {
 
       {/* mobile header */}
       <div
-        className={`${
-          active === true ? "shadow-sm fixed top-0 left-0 z-10 " : null
-        }
-      w-full h-[70px] bg-[#E6007E] z-50 top-0 left-0 shadow-sm 800px:hidden`}
+
+        className={`${active === true ? "shadow-sm fixed top-0 left-0 z-10 " : null
+          }
+      w-full h-[70px] bg-[#d2afc3] z-50 top-0 left-0 shadow-sm 800px:hidden`}
       >
         <div className="h-full w-full flex items-center justify-between">
           <div>
@@ -223,9 +256,9 @@ const Header = ({ activeHeading }) => {
             />
           </div>
           <div>
-          <Link to="/">
+            <Link to="/">
               <img
-                src= {logo}
+                src={logo}
                 alt=""
                 className="mt-3 cursor-pointer max-w-full h-auto"
                 style={{ maxHeight: '70px' }} 
