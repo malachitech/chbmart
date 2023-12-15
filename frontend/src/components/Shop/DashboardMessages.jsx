@@ -257,29 +257,30 @@ const MessageList = ({
   setCurrentChat,
   me,
   setUserData,
+  userData,
   online,
   setActiveStatus,
   isLoading
 }) => {
   console.log(data);
-  const [user, setUser] = useState([]);
+  // const [user, setUser] = useState([]);
   const navigate = useNavigate();
   const handleClick = (id) => {
     navigate(`/dashboard-messages?${id}`);
     setOpen(true);
   };
   const [active, setActive] = useState(0);
-  console.log(user, "first one");
+  console.log(userData, "first one");
 
   useEffect(() => {
     const userId = data.members.find((user) => user != me);
-  
+    console.log(userId, "user id")
     const getUser = async () => {
       try {
         const res = await axios.get(`${server}/user/user-info/${userId}`);
         console.log(res.data.user, "third one");
 
-        setUser(res.data.user);
+        setUserData(res.data.user);
         console.log(res.data.user, "fourth one");
       } catch (error) {
         console.log(error);
@@ -287,7 +288,7 @@ const MessageList = ({
     };
     getUser();
   }, [me, data]);
-  console.log(user, "second one")
+  
   return (
     <div
       className={`w-full flex p-3 px-3 ${
@@ -297,13 +298,13 @@ const MessageList = ({
         setActive(index) ||
         handleClick(data._id) ||
         setCurrentChat(data) ||
-        setUserData(user) ||
+        setUserData(userData) ||
         setActiveStatus(online)
       }
     >
       <div className="relative">
         <img
-          src={`${user?.avatar?.url}`}
+          src={`${userData?.avatar?.url}`}
           alt=""
           className="w-[50px] h-[50px] rounded-full"
         />
@@ -314,11 +315,11 @@ const MessageList = ({
         )}
       </div>
       <div className="pl-3">
-        <h1 className="text-[18px]">{user?.name}</h1>
+        <h1 className="text-[18px]">{userData?.name}</h1>
         <p className="text-[16px] text-[#000c]">
-          {!isLoading && data?.lastMessageId !== user?._id
+          {!isLoading && data?.lastMessageId !== userData?._id
             ? "You:"
-            : user?.name.split(" ")[0] + ": "}{" "}
+            : userData?.name.split(" ")[0] + ": "}{" "}
           {data?.lastMessage}
         </p>
       </div>
@@ -380,6 +381,7 @@ const SellerInbox = ({
                 )}
                 {item.images && (
                   <img
+                    alt="seller"
                     src={`${item.images?.url}`}
                     className="w-[300px] h-[300px] object-cover rounded-[10px] mr-2"
                   />
@@ -406,7 +408,7 @@ const SellerInbox = ({
 
       {/* send message input */}
       <form
-        aria-required={true}
+        required={true}
         className="p-3 relative w-full flex justify-between items-center"
         onSubmit={sendMessageHandler}
       >
