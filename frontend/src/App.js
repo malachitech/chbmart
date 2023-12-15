@@ -31,6 +31,7 @@ import {
   EventsPage,
   FAQPage,
   HomePage,
+  LiveChat,
   LoginPage,
   OrderDetailsPage,
   OrderSuccessPage,
@@ -118,6 +119,8 @@ const App = () => {
 
          <Route path="/posts" element={<PostsPage />} />
         <Route path="/faq" element={<FAQPage />} />
+        <Route path="/about" element={<LiveChat />} />
+        <Route path="/contact" element={<FAQPage />} />
 
         <Route
           path="/checkout"
