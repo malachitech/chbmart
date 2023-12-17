@@ -10,7 +10,7 @@ import emailjs from 'emailjs-com';
 
 const Contact = () => {
   return(
-    <div>
+    <div className={`bg-black`}>
       <Header activeHeading={5} />
 
       <SlideInOnScroll>
