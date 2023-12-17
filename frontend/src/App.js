@@ -12,6 +12,7 @@ import { getAllPosts } from "./redux/actions/post";
 import { getAllProducts } from "./redux/actions/product";
 import { loadSeller, loadUser } from "./redux/actions/user";
 import Store from "./redux/store";
+import { LiveChat } from "./routes/Routes.js";
 import {
   AdminDashboardEvents,
   AdminDashboardOrders,
@@ -115,9 +116,10 @@ const App = () => {
         <Route path="/product/:id" element={<ProductDetailsPage />} />
         <Route path="/best-selling" element={<BestSellingPage />} />
         <Route path="/events" element={<EventsPage />} />
-
-         <Route path="/posts" element={<PostsPage />} />
-        <Route path="/faq" element={<FAQPage />} />
+         {/* <Route path="/posts" element={<PostsPage />} />
+        <Route path="/faq" element={<FAQPage />} /> */}
+        <Route path="/about" element={<LiveChat />} />
+        <Route path="/contact" element={<FAQPage />} />
 
         <Route
           path="/checkout"

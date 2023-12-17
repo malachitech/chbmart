@@ -31,6 +31,7 @@ export {
     FAQPage,
     CheckoutPage,
     PaymentPage,
+    PostsPage,
     OrderSuccessPage,
     ProductDetailsPage,
     ProfilePage,

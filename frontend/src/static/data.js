@@ -29,7 +29,7 @@ export const navItems = [
     url: "/about",
   },
   {
-    id: 5,
+    id: 6,
     title: "Contact Us",
     url: "/contact",
   },
