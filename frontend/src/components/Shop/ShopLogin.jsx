@@ -5,6 +5,8 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { server } from "../../server";
 import { toast } from "react-toastify";
+import { FaHome } from "react-icons/fa";
+import logo from '../../static/imgs/logo.png'
 
 const ShopLogin = () => {
   const navigate = useNavigate();
@@ -36,6 +38,20 @@ const ShopLogin = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8 ">
+       <Link to="/">
+          {/* Home Icon Button */}
+          <button className="absolute top-4 right-4 text-pink-600">
+            <FaHome size={24} />
+          </button>
+      </Link>
+      <Link to="/">
+              <img
+                src= {logo}
+                alt=""
+
+                style={{ height: '130px', width: '120px', display: 'flex', margin: '0 auto'}} 
+              />
+      </Link>
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
           Login to your shop
@@ -129,7 +145,7 @@ const ShopLogin = () => {
             </div>
             <div className={`${styles.noramlFlex} w-full`}>
               <h4>Not have any account?</h4>
-              <Link to="/shop-create" className="text-blue-600 pl-2">
+              <Link to="/shop-create" className="text-pink-600 pl-2">
                 Sign Up
               </Link>
             </div>
