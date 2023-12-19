@@ -119,6 +119,7 @@ const App = () => {
          {/* <Route path="/posts" element={<PostsPage />} />
         <Route path="/faq" element={<FAQPage />} /> */}
         <Route path="/about" element={<LiveChat />} />
+        <Route path="/posts" element={<PostsPage />} />
         <Route path="/contact" element={<FAQPage />} />
 
         <Route

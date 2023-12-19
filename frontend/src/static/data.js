@@ -16,17 +16,19 @@ export const navItems = [
     url: "/products",
   },
   {
-    id: 4,
-
+    id: 4, 
     title: "Offers/Events",
-
     url: "/events",
   },
   {
     id: 5,
-
     title: "About Us",
     url: "/about",
+  },
+  {
+    id: 5,
+    title: "Blog",
+    url: "/posts",
   },
   {
     id: 6,
