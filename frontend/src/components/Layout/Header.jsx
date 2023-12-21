@@ -245,7 +245,7 @@ const Header = ({ activeHeading, data }) => {
 
         className={`${active === true ? "shadow-sm fixed top-0 left-0 z-10 " : null
           }
-      w-full h-[70px] bg-[#d2afc3] z-50 top-0 left-0 shadow-sm 800px:hidden`}
+      w-full h-[70px] bg-[#E6007E] z-50 top-0 left-0 shadow-sm 800px:hidden`}
       >
         <div className="h-full w-full flex items-center justify-between">
           <div>
@@ -291,7 +291,7 @@ const Header = ({ activeHeading, data }) => {
           <div
             className={`fixed w-full bg-[#0000005f] z-20 h-full top-0 left-0`}
           >
-            <div className="fixed w-[70%] bg-[#4169E1] h-screen top-0 left-0 z-10 overflow-y-scroll">
+            <div className="fixed w-[70%] bg-black h-screen top-0 left-0 z-10 overflow-y-scroll">
               <div className="w-full justify-between flex pr-3">
                 <div>
                   <div

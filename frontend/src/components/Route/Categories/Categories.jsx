@@ -40,7 +40,7 @@ const Categories = () => {
         <div className={`${styles.heading}`}>
           <h1 style={{color: 'white'}}>All Categories</h1>
         </div>
-        <div className="grid grid-cols-1 gap-[70px] md:grid-cols-2 md:gap-[10px] lg:grid-cols-4 lg:gap-[20px] xl:grid-cols-5 xl:gap-[30px]" style={{marginLeft: '50px'}}>
+        <div className="grid grid-cols-1 gap-[50px] md:grid-cols-2 md:gap-[20px] lg:grid-cols-4 lg:gap-[20px] xl:grid-cols-5 xl:gap-[20px]" style={{marginLeft: '10px'}}>
           {categoriesData &&
             categoriesData.map((i) => {
               const handleSubmit = (i) => {
