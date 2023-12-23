@@ -291,7 +291,7 @@ const Header = ({ activeHeading, data }) => {
           <div
             className={`fixed w-full bg-[#0000005f] z-20 h-full top-0 left-0`}
           >
-            <div className="fixed w-[70%] bg-[#4169E1] h-screen top-0 left-0 z-10 overflow-y-scroll">
+            <div className="fixed w-[70%] bg-[#000000] h-screen top-0 left-0 z-10 overflow-y-scroll">
               <div className="w-full justify-between flex pr-3">
                 <div>
                   <div
