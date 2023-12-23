@@ -261,7 +261,7 @@ const Header = ({ activeHeading, data }) => {
                 src={logo}
                 alt=""
                 className="mt-3 cursor-pointer max-w-full h-auto"
-                style={{ maxHeight: '100px' }} 
+                style={{ maxHeight: '150px' }} 
               />
             </Link>
           </div>
