@@ -245,7 +245,7 @@ const Header = ({ activeHeading, data }) => {
 
         className={`${active === true ? "shadow-sm fixed top-0 left-0 z-10 " : null
           }
-      w-full h-[70px] bg-[#d2afc3] z-50 top-0 left-0 shadow-sm 800px:hidden`}
+      w-full h-[70px] bg-[#E6007E] z-50 top-0 left-0 shadow-sm 800px:hidden`}
       >
         <div className="h-full w-full flex items-center justify-between">
           <div>
@@ -261,12 +261,12 @@ const Header = ({ activeHeading, data }) => {
                 src={logo}
                 alt=""
                 className="mt-3 cursor-pointer max-w-full h-auto"
-                style={{ maxHeight: '70px' }} 
+                style={{ maxHeight: '100px' }} 
               />
             </Link>
           </div>
           <div className="flex">
-            <div className="relative mr-[20px]" onClick={() => setMessages(true)}>
+            <div className="relative mr-[20px]" onClick={handleMessageSubmit}>
               <IoChatbubbleEllipses size={30} style={{color: 'white'}}/>
             </div>
             <div
