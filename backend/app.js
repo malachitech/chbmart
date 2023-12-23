@@ -5,6 +5,7 @@ const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const path = require("path");
+const fileUpload = require('express-fileupload');
 
 app.use(cors({
   origin: ['https://allsextoys.vercel.app'],
@@ -19,6 +20,9 @@ app.use("/test", (req, res) => {
   res.send("Hello world!"); 
 });
 
+app.use(fileUpload({
+  limits: { fileSize: 50 * 1024 * 1024 },
+}));
 
 app.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
 
