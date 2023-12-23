@@ -1,6 +1,6 @@
 const styles = {
   custom_container: "w-11/12 hidden sm:block",
-  heading: 'text-[30px] text-center md:text-start font-[700] font-Roboto pb-[20px]',
+  heading: 'text-[30px] text-center text-[#fff] md:text-start font-[700] font-Roboto pb-[20px]',
   section:'w-11/12 mx-auto',
 
   '@media (max-width: 768px)': {

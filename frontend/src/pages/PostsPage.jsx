@@ -17,7 +17,7 @@ const PostsPage = () => {
         <Loader />
       ) : (
         <div>
-          <Header activeHeading={4} />
+          <Header activeHeading={6} />
           <div className={`${styles.section} my-8`}>
             <div className={`${styles.heading}`}>
               <h1>Blog Posts</h1>
