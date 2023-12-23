@@ -13,7 +13,7 @@ app.use(cors({
 }));
 // app.use(express.bodyParser({limit: '50mb'}))
 app.use(express.json());
-app.use(bodyParser.json({limit: '50mb'}));
+app.use(bodyParser.json({limit: '52428800'}));
 app.use(cookieParser());
 app.use("/", express.static(path.join(__dirname, "./uploads")));
 app.use("/test", (req, res) => {
@@ -24,7 +24,7 @@ app.use(fileUpload({
   limits: { fileSize: 50 * 1024 * 1024 },
 }));
 
-app.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
+app.use(bodyParser.urlencoded({ extended: true, limit: "52428800" }));
 
 // config
 if (process.env.NODE_ENV !== "PRODUCTION") {
