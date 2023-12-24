@@ -1,11 +1,12 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import { server } from "../../server";
 import styles from "../../styles/styles";
 import Loader from "../Layout/Loader";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllProductsShop } from "../../redux/actions/product";
+import { toast } from "react-toastify";
 
 const ShopInfo = ({ isOwner }) => {
   const [data,setData] = useState({});
@@ -13,6 +14,7 @@ const ShopInfo = ({ isOwner }) => {
   const [isLoading,setIsLoading] = useState(false);
   const {id} = useParams();
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(getAllProductsShop(id));
@@ -26,12 +28,21 @@ const ShopInfo = ({ isOwner }) => {
     })
   }, [])
   
+  
 
   const logoutHandler = async () => {
+    console.log("i am logged out")
     axios.get(`${server}/shop/logout`,{
       withCredentials: true,
+    })
+    .then((res) => {
+      toast.success(res.data.message);
+      window.location.reload(true);
+      navigate("/");
+    })
+    .catch((error) => {
+      console.log(error.response.data.message);
     });
-    window.location.reload();
   };
 
   const totalReviewsLength =
