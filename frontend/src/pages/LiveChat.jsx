@@ -346,8 +346,8 @@ const Faq = () => {
 
 const AboutUs = () => {
   return (
-    <div className="bg-black my-8 text-white">
-      <div className="container mx-auto px-4">
+    <div className="bg-black text-white">
+      <div className="container mx-auto mx-auto space-y-4 p-12">
         <h2 className="text-3xl font-bold mb-4">About Us</h2>
         <p className="text-lg mb-6">
           Sextoys.online is a subsidiary of date deals limited whose aim is to help people live happier and more satisfied with their sexual partners. We provide solutions and guidance needed in relationships regarding all aspects of their sex life's challenges. With our experienced and professional counselors, Date Deals offers accessible, convenient solutions for those seeking online therapy. Take an in-depth questionnaire to find the right therapist for you.
@@ -433,21 +433,21 @@ const AboutUs = () => {
 
 const TermsAndConditions = () => {
     return (
-      <div className="bg-black text-white py-8">
-        <div className="container mx-auto px-4">
+      <div className="bg-black text-white">
+        <div className="container mx-auto space-y-4 p-12">
           <h2 className="text-3xl font-bold mb-6">Terms and Conditions</h2>
           <div className="prose">
-            <h3>Introduction</h3>
+            <h3 className="text-xl font-bold my-4">Introduction</h3>
             <p>
              - These terms and conditions outline the rules and regulations for the use of AllSexToys, located at www.allsextoys.online.
             </p>
   
-            <h3> Intellectual Property Rights</h3>
+            <h3 className="text-xl font-bold my-4"> Intellectual Property Rights</h3>
             <p>
               - Other than the content you own, under these terms, AllSexToys and/or its licensors own all the intellectual property rights and materials contained in this Website.
             </p>
   
-            <h3> Disclaimer</h3>
+            <h3 className="text-xl font-bold my-4"> Disclaimer</h3>
             <p>
               - To the maximum extent permitted by applicable law, we exclude all representations, warranties, and conditions relating to AllSexToys
             </p>
