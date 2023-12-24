@@ -34,7 +34,9 @@ const ActivationPage = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        background:"white"
       }}
+      className="bg-[#fff]"
     >
       {error ? (
         <p>Your token is expired!</p>
