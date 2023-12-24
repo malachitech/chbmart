@@ -346,7 +346,7 @@ const Faq = () => {
 
 const AboutUs = () => {
   return (
-    <div className="bg-black py-8 text-white">
+    <div className="bg-black p-20 text-white">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-4">About Us</h2>
         <p className="text-lg mb-6">
