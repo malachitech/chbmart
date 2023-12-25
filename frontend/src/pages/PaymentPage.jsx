@@ -11,7 +11,7 @@ const PaymentPage = () => {
        <br />
        <br />
        <CheckoutSteps active={2} />
-       <Payment />
+       {/* <Payment /> */}
        <br />
        <br />
        <Footer />
