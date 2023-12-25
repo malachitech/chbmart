@@ -27,8 +27,9 @@ const Checkout = () => {
   }, []);
 
   const paymentSubmit = () => {
-   if(address1 === "" || address2 === "" || zipCode === null || country === "" || city === ""){
-      toast.error("Please choose your delivery address!")
+    
+   if(address1 === "" || zipCode === null || country === "" || city === ""){
+      toast.error("Kindly fill out your delivery address!")
    } else{
     const shippingAddress = {
       address1,
@@ -49,7 +50,7 @@ const Checkout = () => {
     }
 
     // update local storage with the updated orders array
-    localStorage.setItem("latestOrder", JSON.stringify(orderData));
+    // localStorage.setItem("latestOrder", JSON.stringify(orderData));
     navigate("/payment");
    }
   };
@@ -263,7 +264,6 @@ const ShippingInfo = ({
               type="address"
               value={address2}
               onChange={(e) => setAddress2(e.target.value)}
-              required
               className={`${styles.input}`}
             />
           </div>
