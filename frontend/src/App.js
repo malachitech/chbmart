@@ -1,5 +1,5 @@
-import { Elements } from "@stripe/react-stripe-js";
-import { loadStripe } from "@stripe/stripe-js";
+// import { Elements } from "@paystack/react-paystack-js";
+// import { loadpaystack } from "@paystack/paystack-js";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -69,11 +69,11 @@ import { server } from "./server";
 
 
 const App = () => {
-  const [stripeApikey, setStripeApiKey] = useState("");
+  const [paystackApikey, setPaystackApiKey] = useState("");
 
-  async function getStripeApikey() {
-    const { data } = await axios.get(`${server}/payment/stripeapikey`);
-    setStripeApiKey(data.stripeApikey);
+  async function getPaystackApikey() {
+    const { data } = await axios.get(`${server}/payment/paystackapikey`);
+    setPaystackApiKey(data.paystackApikey);
   }
   useEffect(() => {
     Store.dispatch(loadUser());
@@ -81,13 +81,13 @@ const App = () => {
     Store.dispatch(getAllProducts());
     Store.dispatch(getAllEvents());
     Store.dispatch(getAllPosts());
-    getStripeApikey();
+    getPaystackApikey();
   }, []);
 
   return (
     <BrowserRouter>
-      {stripeApikey && (
-        <Elements stripe={loadStripe(stripeApikey)}>
+      {paystackApikey && (
+        // <Elements paystack={loadpaystack(paystackApikey)}>
           <Routes>
             <Route
               path="/payment"
@@ -98,7 +98,7 @@ const App = () => {
               }
             />
           </Routes>
-        </Elements>
+        // </Elements>
       )}
       <Routes>
         <Route path="/" element={<HomePage />} />
