@@ -48,9 +48,9 @@ const Checkout = () => {
       shippingAddress,
       user,
     }
-
+    console.log("latest order", orderData, shippingAddress)
     // update local storage with the updated orders array
-    // localStorage.setItem("latestOrder", JSON.stringify(orderData));
+    localStorage.setItem("latestOrder", JSON.stringify(orderData));
     navigate("/payment");
    }
   };
